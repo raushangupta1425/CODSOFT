@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* creating columns */
+.col-1{
+    width: 8.33%;
+}
+.col-2{
+    width: 16.66%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.32%;
+}
+.col-5{
+    width: 41.65%;
+}
+.col-6{
+    width: 49.98%;
+}
+.col-7{
+    width: 58.31%;
+}
+.col-8{
+    width: 66.64%;
+}
+.col-9{
+    width: 74.97%;
+}
+.col-10{
+    width: 83.30%;
+}
+.col-11{
+    width: 91.63%;
+}
+.col-12{
+    width: 100%;
+}
+
+/* header designing  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    height: 100px;
+    /* background-color: #e9e9e9; */
+    display: flex;
+    align-items: center;
+}
+#nameLogo{
+    font-family: 'Cedarville Cursive', cursive;
+    /* color: #9696f0; */
+    font-size: 20px;
+    padding-left: 30px;
+}
+#menuBar ul{
+    display: inline-flex;
+    padding-left: 120px;
+}
+#menuBar li{
+    list-style: none;
+    padding: 18px;
+    font-size: 18px;
+    color: #706b6b;
+    cursor: pointer;
+}
+#menuBar li:hover{
+    color: #000000;
+}
+/* header designing end */
