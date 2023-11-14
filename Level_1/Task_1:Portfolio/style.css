@@ -44,10 +44,12 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 body{
     width: 100%;
     height: 100vh;
 }
+
 header{
     width: 100%;
     height: 100px;
@@ -55,16 +57,19 @@ header{
     display: flex;
     align-items: center;
 }
+
 #nameLogo{
     font-family: 'Cedarville Cursive', cursive;
     /* color: #9696f0; */
     font-size: 20px;
     padding-left: 30px;
 }
+
 #menuBar ul{
     display: inline-flex;
     padding-left: 120px;
 }
+
 #menuBar li{
     list-style: none;
     padding: 18px;
@@ -72,7 +77,144 @@ header{
     color: #706b6b;
     cursor: pointer;
 }
+
 #menuBar li:hover{
     color: #000000;
 }
 /* header designing end */
+
+/* intro section designing start */
+#sec_1{
+    display: inline-flex;
+    margin-bottom: 50px;
+}
+
+#intro{
+    padding: 40px;
+}
+
+#intro h1{
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+#intro h3,#about h3{
+    font-size: 22px;
+    color: #8a8484;
+    font-weight: normal;
+    line-height: 40px;
+}
+
+#intro img{
+    width: 7%;
+    margin-top: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#intro button{
+    width: 30%;
+    border-radius: 5px;
+    padding: 15px;
+    border: none;
+    margin-right: 40px;
+    background-color: rgb(80, 11, 170);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#profilePic img{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+    background-color: #f8f6f6;
+    border-radius: 50%;
+}
+/* intro section designing end */
+
+/* about section designing start */
+.container{
+    width: 100%;
+    display: inline-flex;
+    height: 80vh;
+}
+
+#sec_2{
+    margin-bottom: 50px;
+}
+
+#aboutTag{
+    height: 80px;
+    /* border: 1px solid red; */
+}
+
+#slider{
+    width: 30%;
+    height: 80px;
+    float: right;
+    background-color: orangered;
+    border-radius: 50px 0 0 50px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profilePic2 img{
+    width: 70%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 50%;
+}
+
+#about,#skills{
+    display: flex;
+    align-items: center;
+}
+/* about section designing end */
+
+/* skills section designing start */
+#sec_3{
+    margin-bottom: 50px;
+}
+
+#skillsTag{
+    height: 80px;
+}
+
+#slider2{
+    width: 30%;
+    height: 80px;
+    float: left;
+    background-color: #70c1e0;
+    border-radius: 0 50px 50px 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills ul{
+    font-size: 22px;
+    color: #8a8484;
+    font-weight: normal;
+    line-height: 40px;
+    padding: 40px;
+}
+
+#profilePic3 img{
+    width: 70%;
+    height: 85%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 50%;
+}
+/* skills section designing end */
