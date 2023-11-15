@@ -210,6 +210,14 @@ header{
     padding: 40px;
 }
 
+#skills{
+    padding-left: 150px;
+}
+
+#skills li{
+    margin-left: 40px;
+}
+
 #profilePic3 img{
     width: 70%;
     height: 85%;
