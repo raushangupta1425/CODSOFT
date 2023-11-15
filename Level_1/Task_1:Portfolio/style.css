@@ -67,9 +67,11 @@ header{
 
 #menuBar ul{
     display: inline-flex;
-    padding-left: 120px;
+    padding-left: 240px;
 }
-
+#menuBar a{
+    text-decoration: none;
+}
 #menuBar li{
     list-style: none;
     padding: 18px;
@@ -99,7 +101,7 @@ header{
     margin-bottom: 20px;
 }
 
-#intro h3,#about h3{
+#intro h3,#about h3,#resume h2{
     font-size: 22px;
     color: #8a8484;
     font-weight: normal;
@@ -147,12 +149,12 @@ header{
     margin-bottom: 50px;
 }
 
-#aboutTag{
+#aboutTag #projectsTag,#contactTag{
     height: 80px;
     /* border: 1px solid red; */
 }
 
-#slider{
+#slider,#slider3,#slider5{
     width: 30%;
     height: 80px;
     float: right;
@@ -184,11 +186,11 @@ header{
     margin-bottom: 50px;
 }
 
-#skillsTag{
+#skillsTag,#resumeTag{
     height: 80px;
 }
 
-#slider2{
+#slider2,#slider4{
     width: 30%;
     height: 80px;
     float: left;
@@ -211,7 +213,7 @@ header{
 }
 
 #skills{
-    padding-left: 150px;
+    padding-left: 30px;
 }
 
 #skills li{
@@ -226,3 +228,95 @@ header{
     border-radius: 50%;
 }
 /* skills section designing end */
+
+/* projets section designing start */
+.container2{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0;
+}
+.container2 img{
+    width: 100%;
+    padding: 10px;
+    
+}
+.container2 div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    background-color: #f8f6f6;
+}
+.container2 button{
+    width: 40%;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    margin: 0 0 5% 30%;
+    background-color: rgb(80, 11, 170);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* projets section designing end */
+
+/* resume section designing start */
+#resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+#resume a{
+    width: 50%;
+    border-radius: 5px;
+    padding: 15px;
+    border: none;
+    margin: 35% 40% 5% 30%;
+    background-color: rgb(1, 172, 72);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+#resumeDisp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* resume section designing end */
+
+/* contact section designing start */
+.container3{
+    padding: 5% 10%;
+    height: 50vh;
+    background-color: #eceaea;
+}
+.container3 div{
+    display: inline-flex;
+    font-size: 30px;
+    margin: 20px;
+    /* border: 1px solid red; */
+}
+.container3 i{
+    margin-right: 10px;
+}
+/* contact section designing end */
+
+/* footer designing start */
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: #eceaea;
+    border: 2px solid #a7a3a3;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+/* footer designing end */
