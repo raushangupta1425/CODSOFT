@@ -65,14 +65,22 @@ header{
     padding-left: 30px;
 }
 
+#menuLine{
+    display: none;
+    /* border: 1px solid red; */
+    font-size: 30px;
+}
+
 #menuBar ul{
-    display: inline-flex;
     padding-left: 240px;
 }
+
 #menuBar a{
     text-decoration: none;
 }
+
 #menuBar li{
+    display: inline;
     list-style: none;
     padding: 18px;
     font-size: 18px;
@@ -139,12 +147,6 @@ header{
 /* intro section designing end */
 
 /* about section designing start */
-.container{
-    width: 100%;
-    display: inline-flex;
-    height: 80vh;
-}
-
 #sec_2{
     margin-bottom: 50px;
 }
@@ -166,6 +168,13 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container{
+    width: 100%;
+    display: inline-flex;
+    height: 80vh;
+    padding: 10px;
 }
 
 #profilePic2 img{
@@ -314,9 +323,104 @@ footer{
     width: 100%;
     height: 80px;
     background-color: #eceaea;
-    border: 2px solid #a7a3a3;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 /* footer designing end */
+
+/* Making responsive for mobile screen */
+/* header designing */
+@media only screen and (max-width: 425px) {
+    header{
+        /* border: 1px solid red; */
+        align-items: normal;
+        position: relative;
+        height: 3em;
+    }
+
+    #nameLogo{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    #menuLine{
+        display: block;
+        position: absolute;
+        right: 0.5em;
+        top: 0.2em;
+    }
+
+    #menuBar ul{
+        display: none;
+    }
+
+    #menuBar:hover #menuBar ul{
+        position: absolute;
+        top: 8em;
+        right: .5em;
+        display: block;
+        padding-left: 0;
+    }
+
+    #menuBar li{
+        padding: 2em;
+        /* flex-direction: column; */
+        border: 1px solid red;
+    }
+
+    /* Section 1 intro designing */
+    #sec_1{
+        flex-direction: column;
+    }
+    #intro{
+        width: 100%;
+        padding: 0.5em;
+    }
+    #intro h1{
+        font-size: 1.5em;
+    }
+    #intro h3,#about h3,#resume h2{
+        word-wrap: wrap;
+        font-size: 1em;
+        line-height: 2em;
+    }
+    #intro button{
+        width: 10em;
+        font-size: 0.7em;
+        padding: 0.7em;
+        margin-right: 0.5em;
+    }
+    #profilePic img{
+        width: 25%;
+        position: absolute;
+        top: 2em;
+        right: 1em;
+    }
+
+    /* Section 2 about designing */
+    #sec_2{
+        position: relative;
+    }
+    #aboutTag #projectsTag,#contactTag{
+        height: 1.7em;
+    }
+
+    #slider,#slider3,#slider5{
+        width: 40%;
+        height: 1.7em;
+        font-size: 2em;
+    }
+
+    #profilePic2{
+        width: 40%;
+        position: absolute;
+    }
+
+    #about,#skills{
+        width: 100%;
+    }
+
+/* Section 3 skills designing */
+
+}
