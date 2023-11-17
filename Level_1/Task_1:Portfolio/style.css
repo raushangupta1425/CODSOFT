@@ -371,31 +371,38 @@ footer{
 
     /* Section 1 intro designing */
     #sec_1{
-        flex-direction: column;
+        display: inline-block;
+        margin-bottom: 0;
     }
+
     #intro{
         width: 100%;
         padding: 0.5em;
     }
+
     #intro h1{
         font-size: 1.5em;
     }
+
     #intro h3,#about h3,#resume h2{
         word-wrap: wrap;
         font-size: 1em;
         line-height: 2em;
     }
+
     #intro button{
         width: 10em;
         font-size: 0.7em;
         padding: 0.7em;
         margin-right: 0.5em;
     }
-    #profilePic img{
-        width: 25%;
-        position: absolute;
-        top: 2em;
-        right: 1em;
+
+    #profilePic{
+        width: 30%;
+        float: right;
+        /* border: 1px solid red; */
+        position: relative;
+        top: -8em;
     }
 
     /* Section 2 about designing */
