@@ -72,23 +72,24 @@ header{
 }
 
 #menuBar ul{
-    padding-left: 240px;
-}
-
-#menuBar a{
-    text-decoration: none;
+    padding-left: 230px;
+    /* display: block; */
 }
 
 #menuBar li{
     display: inline;
     list-style: none;
+}
+
+#menuBar a{
+    text-decoration: none;
     padding: 18px;
     font-size: 18px;
     color: #706b6b;
     cursor: pointer;
 }
 
-#menuBar li:hover{
+#menuBar li a:hover{
     color: #000000;
 }
 /* header designing end */
@@ -314,9 +315,10 @@ header{
     align-items: center;
 }
 
-#resumeDisp iframe{
-    width: 285px;
-    height: 367.9px;
+#resumeDisp img{
+    width: 300px;
+    height: 400px;
+    border: 1px solid #a5a5a5;
 }
 /* resume section designing end */
 
@@ -355,39 +357,56 @@ footer{
 @media only screen and (max-width: 425px) {
     header{
         /* border: 1px solid red; */
-        align-items: normal;
-        position: relative;
         height: 3em;
     }
 
     #nameLogo{
         width: 100%;
         padding-left: 0;
+        margin-left: 10px;
     }
 
+    #menuBar{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        height: 3em;
+        /* border: 1px solid red; */
+    }
+    
     #menuLine{
         display: block;
-        position: absolute;
-        right: 0.5em;
-        top: 0.2em;
+        margin-right: 15px;
     }
 
     #menuBar ul{
         display: none;
+        position: absolute;
+        top: 2.9em;
+        right: 0;
+        padding-left: 0;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #706b6b;
     }
 
     #menuBar:hover #menuBar ul{
-        position: absolute;
-        top: 8em;
-        right: .5em;
         display: block;
-        padding-left: 0;
     }
 
     #menuBar li{
-        padding: 2em;
-        /* flex-direction: column; */
-        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        /* border: 1px solid red; */
+    }
+    
+    #menuBar li:hover{
+        background-color: #e9e6e6;
+        border: 1px solid #706b6b;
+        border-radius: 3px;
     }
 
     /* Section 1 intro designing */
@@ -520,11 +539,12 @@ footer{
     
     #resumeDisp{
         width: 100%;
+        height: 450px;
         /* border:  1px solid red; */
     }
     
-    #resumeDisp iframe{
-        width: 100%;
+    #resumeDisp img{
+        width: 90%;
     }
 
     /* Section 6 contact designing */
