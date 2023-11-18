@@ -416,7 +416,7 @@ footer{
     }
 
     #intro{
-        padding: 0.5em;
+        padding: 0.7em;
     }
 
     #intro h1{
@@ -427,6 +427,11 @@ footer{
         font-size: 1em;
         line-height: 2em;
     }
+    
+    #intro img{
+        width: 8%;
+        margin: 30px 10px 15px 0;
+    }
 
     #intro button{
         width: 10em;
@@ -434,11 +439,6 @@ footer{
         padding: 0.7em;
         margin: 0.5em;
         margin-left: 0;
-    }
-
-    #intro img{
-        width: 8%;
-        margin: 30px 10px 15px 0;
     }
 
     #profilePic{
@@ -460,6 +460,10 @@ footer{
         width: 40%;
         height: 1.7em;
         font-size: 1.7em;
+    }
+
+    .about{
+        padding: 0.9em;
     }
 
     #profilePic2{
@@ -486,6 +490,11 @@ footer{
         width: 40%;
         height: 1.7em;
         font-size: 1.7em;
+    }
+
+    .skills{
+        padding: 0.9em;
+        height: 73vh;
     }
 
     #profilePic3{
@@ -564,4 +573,235 @@ footer{
     }
 }
 
-/* @media only screen and () */
+/* Responsive coding for Tablet device */
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    header{
+        border: 1px solid red;
+        height: 3em;
+    }
+
+    #nameLogo{
+        width: 100%;
+        padding-left: 0;
+        margin-left: 10px;
+    }
+
+    #menuBar{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        height: 3em;
+        /* border: 1px solid red; */
+    }
+
+    #menuLine{
+        display: block;
+        margin-right: 15px;
+    }
+
+    #menuBar ul{
+        display: none;
+        position: absolute;
+        top: 2.9em;
+        right: 0;
+        padding-left: 0;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #706b6b;
+    }
+
+    #menuBar:hover #menuBar ul{
+        display: block;
+    }
+
+    #menuBar li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        /* border: 1px solid red; */
+    }
+    
+    #menuBar li:hover{
+        background-color: #e9e6e6;
+        border: 1px solid #706b6b;
+        border-radius: 3px;
+    }
+
+    /* Section 1 intro designing */
+    #sec_1{
+        margin-bottom: 0;
+        height: 90vh;
+    }
+
+    #intro{
+        padding: 0.9em;
+        height: 28em;
+    }
+
+    #intro h1{
+        font-size: 2.3em;
+    }
+
+    #intro h3,#about h3,#resume h2{
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    #intro img{
+        width: 7%;
+        margin: 30px 10px 15px 0;
+    }
+
+    #intro button{
+        width: 12em;
+        font-size: 1em;
+        padding: 0.7em;
+        margin: 0.5em;
+        margin-left: 0;
+    }
+
+    #profilePic{
+        width: 30%;
+        margin: 10% 0;
+        /* border: 1px solid red; */
+    }
+
+    #profilePic img{
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    /* Section 2 about designing */
+    #aboutTag, #projectsTag,#contactTag{
+        height: 4em;
+    }
+
+    #slider,#slider3,#slider5{
+        width: 40%;
+        height: 2em;
+        font-size: 2em;
+    }
+
+    .about{
+        padding: 0.9em;
+    }
+
+    #profilePic2{
+        width: 38%;
+        margin: 40px 0 5px 0;
+    }
+
+    .about h3{
+        padding: 30px 10px 0 10px;
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    /* Section 3 skills designing */
+    #sec_3{
+        margin-bottom: 0;
+    }
+
+    #skillsTag,#resumeTag{
+        height: 4em;
+    }
+
+    #slider2,#slider4{
+        width: 40%;
+        height: 2em;
+        font-size: 2em;
+    }
+
+    .skills{
+        padding: 0.9em;
+        height: 73vh;
+    }
+
+    #profilePic3{
+        width: 40%;
+        /* border: 1px solid red; */
+    }
+    
+    #profilePic3 img{
+        width: 85%;
+        margin: 5% 5%;
+    }
+    
+    .skills ul{
+        width: 100%;
+        padding: 30px 10px;
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+    
+    /* Section 4 project designing */
+    #sec_4{
+        margin-bottom: 0;
+    }
+    
+    .projects{
+        grid-template-columns: repeat(3,1fr);
+        margin: 30px 0;
+    }
+    
+    .projects div{
+        width: 90%;
+    }
+
+    /* Section 5 resume designing */
+    .resumeBox{
+        display: block;
+    }
+    
+    #resume{
+        width: 100%;
+        padding: 0.9em;
+    }
+    
+    #resume a{
+        width: 40%;
+        padding: 15px;
+        font-size: 15px;
+        margin: 3% 50%;
+    }
+    
+    #resumeDisp{
+        width: 100%;
+        height: 700px;
+        /* border:  1px solid red; */
+    }
+    
+    #resumeDisp img{
+        width: 90%;
+        height: 650px;
+    }
+
+    /* Section 6 contact designing */
+    .contact{
+        padding: 10% 5%;
+    }
+    
+    .contact div{
+        width: 100%;
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    /* footer designing */
+    footer{
+        font-size: 15px;
+        height: 50px;
+    }
+}
+
+/* Responsive coding for small screen laptops*/
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+
+}
+
+/* Responsive coding for wide screen */
+@media only screen and (min-width: 1440px){
+
+}
