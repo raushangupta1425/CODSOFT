@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* creating columns */
+.col-1{
+    width: 8.33%;
+}
+.col-2{
+    width: 16.66%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.32%;
+}
+.col-5{
+    width: 41.65%;
+}
+.col-6{
+    width: 49.98%;
+}
+.col-7{
+    width: 58.31%;
+}
+.col-8{
+    width: 66.64%;
+}
+.col-9{
+    width: 74.97%;
+}
+.col-10{
+    width: 83.30%;
+}
+.col-11{
+    width: 91.63%;
+}
+.col-12{
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header css */
+.container{
+    height: 100vh;
+    font-family: sans-serif;
+}
+header{
+    height: 70px;
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* border: 1px solid red; */
+}
+
+#logoText{
+    display: inline-flex;
+    align-items: center;
+}
+
+#logoText hr{
+    width: 4px;
+    height: 50px;
+    transform: rotate(180deg);
+    margin: 5px 10px 0 20px;
+    border: none;
+    background-color: rgb(39, 202, 39);
+}
