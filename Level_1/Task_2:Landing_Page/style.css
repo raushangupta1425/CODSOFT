@@ -217,3 +217,96 @@ section{
 #text button:hover{
     background-color: #45B649;
 }
+
+#connect{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#connect div{
+    width: 25%;
+    color: #ffffff;
+}
+
+#connect i{
+    float: left;
+    font-size: 25px;
+}
+
+#connect h1{
+    margin: 0 0 0 40px;
+    line-height: 25px;
+}
+
+.about{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about hr,.services hr{
+    width: 13%;
+    height: 2px;
+    float: left;
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.about div{
+    width: 70%;
+}
+
+.about h1{
+    color: #45B649;
+}
+
+.about h1,h4{
+    margin: 10px 0;
+}
+
+.about button{
+    padding: 9px;
+    width: 10%;
+    border-radius: 20px;
+    border: none;
+    background-color: #45B649;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.services{
+    height: 400px;
+    color: #45B649;
+    padding-left: 150px;
+    padding-top: 50px;
+    background-color: rgb(231, 231, 231);
+}
+
+.services h1{
+    margin: 20px 0 10px 0;
+}
+
+.serviceBox div{
+    width: 15%;
+    height: 200px;
+    padding: 15px;
+    background-color: #cccccc;
+    border-radius: 10px;
+    float: left;
+    margin: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.services img{
+    width: 100%;
+    height: 150px;
+}
