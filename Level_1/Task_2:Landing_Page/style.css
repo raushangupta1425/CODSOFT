@@ -41,11 +41,14 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* header css */
 .container{
-    height: 100vh;
+    height: fit-content;
     font-family: sans-serif;
 }
 
@@ -294,13 +297,18 @@ section{
     margin: 20px 0 10px 0;
 }
 
+.serviceBox{
+    width: 100%;
+    display: inline-flex;
+}
+
 .serviceBox div{
-    width: 15%;
+    width: 17%;
     height: 200px;
     padding: 15px;
     background-color: #cccccc;
     border-radius: 10px;
-    float: left;
+    /* float: left; */
     margin: 20px;
     font-size: 13px;
     text-align: center;
