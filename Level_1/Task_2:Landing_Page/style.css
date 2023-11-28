@@ -73,7 +73,6 @@ body{
 
 .contact td{
     padding: 0 10px;
-    /* border: 1px solid red; */
 }
 
 header{
@@ -87,7 +86,6 @@ header{
     height: 70px;
     color: #45B649;
     padding-top: 8px;
-    /* border: 1px solid red; */
 }
 
 #logoText hr, #layer_2 hr{
@@ -109,7 +107,6 @@ header{
 #menu{
     list-style: none;
     height: 70px;
-    /* border: 1px solid red; */
     display: inline-flex;
     align-items: center;
 }
@@ -308,7 +305,6 @@ section{
     padding: 15px;
     background-color: #cccccc;
     border-radius: 10px;
-    /* float: left; */
     margin: 20px;
     font-size: 13px;
     text-align: center;
