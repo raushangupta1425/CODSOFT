@@ -1,3 +1,4 @@
+// Selectors
 let numberButtons = document.querySelectorAll('[number]');
 let operationButtons = document.querySelectorAll('[oper]');
 let equalsButton = document.querySelector('[equl]');
@@ -6,6 +7,7 @@ let deletButton = document.querySelector('[delet]');
 let previousButton = document.getElementById("previous");
 let currentButton = document.getElementById("current");         // for Recently typed number
 
+//Accept all numbers.
 numberButtons.forEach(button => {
     button.addEventListener('click', () =>{ 
         if(currentButton.innerHTML == "0"){
@@ -19,58 +21,70 @@ numberButtons.forEach(button => {
     })
 })
 
+//Accept all operators.
 operationButtons.forEach(button => {
     button.addEventListener('click', () =>{ 
         currentButton.style.color = "#ffffff";
         currentButton.innerHTML += button.innerHTML;
+        sessionStorage.setItem("operation",button.innerHTML);
     })
 })
+
+//Accept all clear button.
 clearButton.addEventListener('click', button =>{ 
     currentButton.innerHTML = "0";
     previousButton.innerHTML = "";
     currentButton.style.color = "#ccc"
 })
+
+//Accept delete button.
 deletButton.addEventListener('click', button =>{ 
     previousButton.innerHTML = "";
     currentButton.innerHTML = currentButton.innerHTML.toString().slice(0, -1);
 })
 
+//Accept equal button.
 equalsButton.addEventListener('click', button =>{ 
     previousButton.innerHTML = currentButton.innerHTML;
+    let operation = sessionStorage.getItem("operation");
     let combineString = currentButton.innerHTML.toString();
-    currentButton.innerHTML = eval(combineString);
-    // var operands = combineString.split("+");
-    // var operands = combineString.split("-");
-    // var operands = combineString.split("*");
-    // alert(operands[1]);
-    // var res = compute(operands[0],operands[1]);
-    // alert(res);
-    // currentButton.innerHTML = res;
+    // currentButton.innerHTML = eval(combineString);
+    let operands = combineString.split(operation);
+    if(combineString.includes('(') && combineString.includes(')')){
+        combineString = combineString.replace('(','*(');
+    }
+    currentButton.innerHTML = compute(operands[0],operands[1],operation,combineString);
 })
-// var operation = '+';
-// function compute(prev, current){
-//     let computation;
-//     if(currentButton.toString.includes('+' || '-' || '*' || '/')){
-//             operation = currentButton.toString().slice(length/2,(length/2)+1)
-//         }
-//     let first = parseFloat(prev);
-//     let sec = parseFloat(current);
-//     alert(typeof first)
-//     switch(operation) {
-//         case '+':
-//             computation = first + sec;
-//             break;
-//         case '-':
-//             computation = prev - current;
-//             break;
-//         case '*':
-//             computation = prev * current;
-//             break;
-//         case '/':
-//             computation = prev / current;
-//             break;
-//         default:
-//             operation = undefined;
-//         return computation;
-//     }
-// }
+
+// Calculation or computation of numbers.
+function compute(prev, current, operation,combineString){
+    let computation;
+    let firstNumber = parseFloat(prev);
+    let secondNumber = parseFloat(current);
+    switch(operation) {
+        case '+':
+            computation = firstNumber + secondNumber;
+            break;
+        case '-':
+            computation = firstNumber - secondNumber;
+            break;
+        case '*':
+            computation = firstNumber * secondNumber;
+            break;
+        case '/':
+            computation = firstNumber / secondNumber;
+            break;
+        case '%':
+            computation = firstNumber % secondNumber;
+            break;
+        case ')':
+            computation = eval(combineString);
+            break;
+        case '^':
+            computation = firstNumber ** secondNumber;
+            break;
+        default:
+            operation = undefined;
+        }
+    return computation;
+}
