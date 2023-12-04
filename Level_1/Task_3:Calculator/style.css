@@ -43,7 +43,7 @@ body{
     font-size: 1.5rem;
 }
 
-span{
+#pannel_1{
     background-color: rgb(32, 31, 31);
     border-radius: 10px;
     border-bottom-left-radius: 0;
@@ -78,4 +78,17 @@ button{
     width: 70px;
     margin-left: 15px;
     margin-top: 12px;
+}
+
+/* pannel 2 coding */
+#pannel_2{
+    height: 43vh;
+    background-color: rgb(32, 31, 31);
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 2.151rem);
+    display: none;
 }

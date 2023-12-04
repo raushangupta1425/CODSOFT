@@ -6,6 +6,10 @@ let clearButton = document.querySelector('[clear]');
 let deletButton = document.querySelector('[delet]');
 let previousButton = document.getElementById("previous");
 let currentButton = document.getElementById("current");         // for Recently typed number
+let switchBtn = document.getElementById("switch");
+let switchBackBtn = document.getElementById("switchBack");
+let Pannel_1 = document.getElementById("pannel_1");
+let Pannel_2 = document.getElementById("pannel_2");
 
 //Accept all numbers.
 numberButtons.forEach(button => {
@@ -87,4 +91,14 @@ function compute(prev, current, operation,combineString){
             operation = undefined;
         }
     return computation;
+}
+
+// Switching to another pannel coding.
+switchBtn.onclick = function (){
+    Pannel_1.style.display = "none";
+    Pannel_2.style.display = "grid";
+}
+switchBackBtn.onclick = function (){
+    Pannel_2.style.display = "none";
+    Pannel_1.style.display = "grid";
 }
