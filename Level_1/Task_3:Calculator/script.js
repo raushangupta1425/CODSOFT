@@ -92,6 +92,39 @@ equalsButton2.addEventListener('click', button =>{
         let AnsStore = sessionStorage.getItem("Ans");
         operands[0] = AnsStore;
         currentButton.innerHTML = compute(operands[0],operands[1],operation,combineString);
+    }else if(combineString.includes('sin')){                        // sin value calculation.
+        let Value = combineString;
+        if(combineString.includes(")")){
+            Value = combineString.slice(0,-1);
+            Value = Value.split("(");
+        }else if(combineString.includes("(")){
+            Value = Value.split("(");
+        }else{
+            Value = combineString.split("sin");
+        }
+        currentButton.innerHTML = Math.sin(Value[1]);
+    }else if(combineString.includes('cos')){                        // cos value calculation.
+        let Value = combineString;
+        if(combineString.includes(")")){
+            Value = combineString.slice(0,-1);
+            Value = Value.split("(");
+        }else if(combineString.includes("(")){
+            Value = Value.split("(");
+        }else{
+            Value = combineString.split("cos");
+        }
+        currentButton.innerHTML = Math.cos(Value[1]);
+    }else if(combineString.includes('tan')){                        // tan value calculation.
+        let Value = combineString;
+        if(combineString.includes(")")){
+            Value = combineString.slice(0,-1);
+            Value = Value.split("(");
+        }else if(combineString.includes("(")){
+            Value = Value.split("(");
+        }else{
+            Value = combineString.split("tan");
+        }
+        currentButton.innerHTML = Math.tan(Value[1]);
     }else{
         if(combineString.includes('(') && combineString.includes(')')){
             combineString = combineString.replace('(','*(');
