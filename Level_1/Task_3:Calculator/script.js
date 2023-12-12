@@ -39,14 +39,14 @@ operationButtons.forEach(button => {
     button.addEventListener('click', () =>{ 
         currentButton.style.color = "#ffffff";
         currentButton.innerHTML += button.innerHTML;
-        // alert(button.innerHTML)
-        // if(button.innerHTML == "&radic;"){
-        //     root = "radic";
-        // }else if(button.innerHTML == "&#8731;"){
-        //     root = "#8731";
-        // }else if(button.innerHTML == "&#8732;"){
-        //     root = "#8732";
-        // }
+        // alert(button.value)
+        if(button.value == "radic"){
+            root = button.value;
+        }else if(button.value == "8731"){
+            root = button.value;
+        }else if(button.value == "8732"){
+            root = button.value;
+        }
         sessionStorage.setItem("operation",button.innerHTML);
     })
 })
@@ -103,10 +103,11 @@ equalsButton2.addEventListener('click', button =>{
         currentButton.innerHTML = compute(operands[0],operands[1],operation,combineString);
     }else if(root == "radic"){                                             // square root value calculation.
         currentButton.innerHTML = Math.sqrt(operands[1]);
-    }else if(root == "#8731"){                                            // cube root value calculation.
-        currentButton.innerHTML = Math.sqrt(operands[1],3);
-    }else if(root == "#8732"){                                            // quard root value calculation.
-        currentButton.innerHTML = Math.sqrt(operands[1],4);
+    }else if(root == "8731"){                                            // cube root value calculation.
+        currentButton.innerHTML = Math.cbrt(operands[1]);
+    }else if(root == "8732"){                                            // quard root value calculation.
+        let temp = Math.sqrt(operands[1]);
+        currentButton.innerHTML = Math.sqrt(temp);
     }else if(combineString.includes('sin')){                        // sin value calculation.
         let Value = combineString;
         if(combineString.includes(")")){
@@ -161,7 +162,7 @@ equalsButton2.addEventListener('click', button =>{
         }else{
             Value = combineString.split("ln");
         }
-        currentButton.innerHTML = Math.LN2(Value[1]);
+        currentButton.innerHTML = Math.LN10(Value[1]);
     }else{
         if(combineString.includes('(') && combineString.includes(')')){
             combineString = combineString.replace('(','*(');
